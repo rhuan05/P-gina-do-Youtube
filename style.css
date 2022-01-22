@@ -1,0 +1,180 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-auto-rows: 100vh;
+    font-family: Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 1;
+    padding: 20px 0px;
+}
+header i{
+    opacity: .7;
+}
+.header-menu{
+    margin-bottom: 30px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.header-icons{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+.header-icons .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    padding: 17px;
+    cursor: pointer;
+}
+.header-icons .item:hover{
+    background: rgb(240, 240, 240);
+}
+.item i{
+    font-size: 23px;
+    margin: 5px; 
+}
+main{
+    grid-column: 2;
+    grid-row: 1;
+}
+.main-top{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+.main-top-youtubeLogo{
+    width: 100px;
+}
+.main-top-inputBusca{
+    display: flex;
+    align-items: center;
+}
+.main-top-inputBusca input{
+    padding: 8px 5px;
+    font-size: 18px;
+    width: 600px;
+    opacity: .5;
+}
+.main-top-inputBusca .fa-keyboard{
+    margin-left: -30px; 
+}
+.main-top-inputBusca button{
+    margin-left: 11px;
+    height: 42px;
+    font-size: 20px;
+    padding: 0px 20px;
+    cursor: pointer;
+    opacity: .5;
+}
+.main-top-mic{
+    margin-left: -170px;
+    font-size: 18px;
+    background: rgb(248, 248, 248);
+    color: rgb(48, 48, 48);
+    padding: 10px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.main-top-left{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 20px;
+}
+.main-top-left i{
+    font-size: 22px;
+    opacity: .7;
+    cursor: pointer;
+}
+.main-top-left .fa-user{
+    background: rgb(230, 230, 230);
+    padding: 10px;
+    border-radius: 20px;
+}
+.main-top-second{
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding: 0px 30px;
+}
+.main-top-second h3{
+    font-weight: 500;
+    font-size: 16px;
+    background: rgb(238, 238, 238);
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid rgb(220, 220, 220);
+    cursor: pointer;
+}
+.main-full-content{
+    padding: 25px;
+    background: rgb(248, 248, 248);
+}
+.main-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.photo-thumb{
+    width: 320px;
+}
+.texts{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-template-rows: 2;
+    gap: 20px;
+    padding: 5px;
+}
+.photo-user{
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    grid-column: 1;
+}
+.texts-video{
+    grid-column: 2;
+    opacity: .9;
+}
+.texts-video p, .texts-video h3{
+    margin: 0;
+    padding: 0;
+}
+.texts-video h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.texts-video p{
+    font-size: 14px;
+}
+footer{
+    display: none;
+}
+@media(max-width: 768px){
+    body{
+        grid-template-columns: 1fr;
+    }
+    header{
+        display: none;
+    }
+    .main-content{
+        flex-direction: column;
+    }
+    .main-top-inputBusca input, .main-top .fa-keyboard, .main-top .main-top-mic{
+        display: none;
+    }
+}
